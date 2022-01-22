@@ -8,9 +8,9 @@
 
 // solution first 
 
-// const array=[1,2,3,4,5,6,7,8,9,10]
-//     array.length=4;
-//     console.log(array);
+const array=[1,2,3,4,5,6,7,8,9,10]
+    array.length=4;
+    console.log(array);
 
     // solution second 
 
@@ -18,17 +18,28 @@
     const num=7
 
     const sorting =(array,num)=>{
-        for (let i=0;i<array.length;i++){
-            if (array[i]<=1){
-               return  array[i]
+       
+        {
+            let count = 0; // Counts the no of zeros in arr
+         
+            for (let i = 0; i < num; i++) {
+                if (array[i] == 0)
+                    count++;
             }
+         
+            // Loop fills the arr with 0 until count
+            for (let i = 0; i < count; i++)
+                arr[i] = 0;
+         
+            // Loop fills remaining arr space with 1
+            for (let i = count; i < num; i++)
+                arr[i] = 1;
         }
 
 
-
     }
-   const result= sorting(unsortedarray,num);
-   console.log(result)
+ sorting(unsortedarray,num);
+
 
 
 
